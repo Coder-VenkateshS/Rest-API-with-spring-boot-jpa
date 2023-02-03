@@ -6,16 +6,19 @@ To build a complete REST API backend
 ## Day 1 | Class Exercise Lab | Introduction to REST API
 
 In this Lab, we will create three services using proper URIs and HTTP methods:
-```
-@GetMapping("/students/{studentId}/courses"): You can ask the courses a specific student has registered for using request method Get and example uri /students/Student1/courses.
-```
-```
-@GetMapping("/students/{studentId}/courses/{courseId}"): You can ask a specific course for a specific student using request method Get and example uri /students/Student1/courses/Course1.
-```
-```
-@PostMapping("/students/{studentId}/courses") : You can register a student for a course by sending a POST request to URI /students/Student1/courses
- ```
-### What will you learn
+
+>@GetMapping("/students/{studentId}/courses"): 
+>You can ask the courses a specific student has registered for using request method Get and example uri /students/Student1/courses.
+
+
+>@GetMapping("/students/{studentId}/courses/{courseId}"): 
+>You can ask a specific course for a specific student using request method Get and example uri /students/Student1/courses/Course1.
+
+
+>@PostMapping("/students/{studentId}/courses"): 
+>You can register a student for a course by sending a POST request to URI /students/Student1/courses
+ 
+### What will you learn?
 ```
 You will learn
  What is a REST Service?
@@ -46,6 +49,19 @@ DevTools
 * Click Generate Project.
 * Import the project into Eclipse. File -> Import -> Existing Maven Project.
 
-### User Story #3 | 
+### User Story #3 | Verify the project structure
 
+A few details:
+```
+StudentController.java - Rest controller exposing all the three service methods discussed above.
+```
+```
+Course.java, Student.java, StudentService.java - Business Logic for the application. StudentService exposes a couple of methods we would consume from our Rest Controller.
+```
+```
+StudentServicesApplication.java - Launcher for the Spring Boot Application. To run the application, just launch this file as Java Application.
+```
+```
+pom.xml - Contains all the dependencies needed to build this project. We will use Spring Boot Starter Web.
+```
 
